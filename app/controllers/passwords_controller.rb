@@ -9,7 +9,7 @@ class PasswordsController < ApplicationController
       redirect_to root_path, notice: "password updated"
     
     else
-      render :edit
+      render :edit, status: :unprocessable_entity
     end
   end
 
